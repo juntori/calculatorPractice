@@ -34,4 +34,13 @@ public class Calculator {
         results.add(result);
         return result;
     }
+
+    public List<Integer> getResults() {
+        return results;
+    }
+
+    public void setResults(List<Integer> newResults){
+        results.clear();
+        results.addAll(newResults);
+    }
 }
