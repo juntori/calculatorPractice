@@ -5,9 +5,26 @@ import java.util.List;
 
 public class Calculator {
     private final List<Integer> results;
+    private final List<Double> circleAreaResults;
 
     public Calculator(){
         this.results = new ArrayList<>();
+        this.circleAreaResults = new ArrayList<>();
+    }
+
+    public double calculateCircleArea(double radius){
+        double circleArea = radius * radius * 3.14;
+        circleAreaResults.add(circleArea);
+        return circleArea;
+    }
+
+    public List<Double> getCircleAreaResults(){
+        return circleAreaResults;
+    }
+
+    public void setCircleAreaResults(List<Double> newCircleAreaResults){
+        circleAreaResults.clear();
+        circleAreaResults.addAll(newCircleAreaResults);
     }
 
     public int calculate(int num1, int num2, char operator) {
