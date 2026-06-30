@@ -41,8 +41,15 @@ public class App {
                         throw new IllegalArgumentException("올바른 사칙연산 기호를 입력해야 합니다.(+, -, *, /)");
                 }
                 System.out.println("결과: " + result);
-                results[count] = result;
-                count++;
+                if (count < results.length){
+                    results[count] = result;
+                    count++;
+                } else {
+                    for(int i = 0; i < results.length-1; i++){
+                        results[i] = results[i+1];
+                    }
+                    results[results.length-1] =result;
+                }
             } catch (Exception e) {
                 System.out.println("오류: " + e.getMessage());
             }
