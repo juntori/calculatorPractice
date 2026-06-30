@@ -43,4 +43,8 @@ public class Calculator {
         results.clear();
         results.addAll(newResults);
     }
+
+    public void removeResult() {
+        results.remove(0);
+    }
 }

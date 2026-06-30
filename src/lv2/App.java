@@ -23,6 +23,12 @@ public class App {
                 System.out.println("오류: " + e.getMessage());
             }
 
+            System.out.println("가장 먼저 저장된 데이터를 삭제하시겠습니까?(y/n)");
+            String remove = sc.next();
+            if (remove.equalsIgnoreCase("y")){
+                calculator.removeResult();
+            }
+
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             String exit = sc.next();
             if (exit.equals("exit")){
