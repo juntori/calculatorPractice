@@ -4,7 +4,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Calculator {
-    private final List<Integer> results = new ArrayList<>();
+    private final List<Integer> results;
+
+    public Calculator(){
+        this.results = new ArrayList<>();
+    }
 
     public int calculate(int num1, int num2, char operator) {
         if(num1 < 0 || num2 < 0){
