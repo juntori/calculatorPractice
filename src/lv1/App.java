@@ -1,9 +1,13 @@
 package lv1;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
+        int[] results = new int[10];
+        int count = 0;
         Scanner sc = new Scanner(System.in);
 
         while (true) {
@@ -37,6 +41,8 @@ public class App {
                         throw new IllegalArgumentException("올바른 사칙연산 기호를 입력해야 합니다.(+, -, *, /)");
                 }
                 System.out.println("결과: " + result);
+                results[count] = result;
+                count++;
             } catch (Exception e) {
                 System.out.println("오류: " + e.getMessage());
             }
