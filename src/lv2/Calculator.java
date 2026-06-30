@@ -47,4 +47,10 @@ public class Calculator {
     public void removeResult() {
         results.remove(0);
     }
+
+    public void inquiryResults(){
+        for (Integer result : results) {
+            System.out.println( );
+        }
+    }
 }

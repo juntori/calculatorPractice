@@ -29,6 +29,12 @@ public class App {
                 calculator.removeResult();
             }
 
+            System.out.println("저장된 데이터를 조회 하시겠습니까? (y/n");
+            String inquiry = sc.next();
+            if (inquiry.equalsIgnoreCase("y")){
+                calculator.inquiryResults();
+            }
+
             System.out.println("더 계산하시겠습니까? (exit 입력 시 종료)");
             String exit = sc.next();
             if (exit.equals("exit")){
